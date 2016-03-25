@@ -1,0 +1,215 @@
+footer {
+  background-color: #3e4041;
+  min-height: 179px;
+  @media #{$bootstrap-sm} {
+    .mobile-footer-hr {
+      display: none;
+    }
+  }
+  @media #{$bootstrap-xs} {
+    .mobile-logo {
+      text-align: center;
+      .mobile-footer-hr {
+        width: 100%;
+        border-top: 1px solid #656667;
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  .btn-right {
+    float: right;
+    .btn-apple {
+      border-radius: 6px;
+      background-color:  #2a96bd;
+      width: 170px;
+      height: 50px;
+      border: none;
+      outline: none;
+      @media #{$bootstrap-sm} {
+        float: right;
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+      @media #{$bootstrap-md} {
+        float: none;
+        margin-top: 30px;
+      }
+      .apple-logo {
+        background: url(../img/apple-logo.png) no-repeat;
+        width: 22px;
+        height: 27px;
+        margin: 10px 13px 0 16px;
+        float: left;
+      }
+      .apple-text-btn {
+        color: #ffffff;
+        vertical-align: middle;
+        height: 100%;
+        display: inline-block;
+        font-family: $ubuntu-medium-font, "sans-serif";
+        font-size: 1.125em;
+        font-weight: 500;
+        line-height: 46px;
+        text-align: left;
+        float: left;
+      }
+    }
+    .btn-android {
+      border-radius: 6px;
+      background-color: #2a96bd;
+      width: 170px;
+      height: 50px;
+      border: none;
+      margin-left: 10px;
+      outline: none;
+      @media #{$bootstrap-sm} {
+        float: right;
+      }
+      @media #{$bootstrap-md} {
+        //float: none;
+        margin-top: 30px;
+
+      }
+      .google-logo {
+        background: url(../img/logo-google.png) no-repeat ,117px 27px;
+        width: 117px;
+        height: 27px;
+        margin: 0 20px;
+      }
+    }
+  }
+
+  @media #{$bootstrap-xs} {
+    .btn-right {
+      display: none;
+    }
+  }
+  p {
+    font-family: $ubuntu-light-font, "sans-serif";
+    color:  #ffffff;
+    font-size: 0.938em;
+    font-weight: 300;
+    line-height: 22px;
+    text-align: left;
+    @media #{$bootstrap-sm} {
+      margin-top: 35px;
+    }
+    @media #{$bootstrap-md} {
+      margin-top: 20px;
+    }
+  }
+  .city {
+    color: #2a96bd;
+    margin-top: 15px;
+    font-family: $ubuntu-light-font, "sans-serif";
+    text-decoration: none;
+  }
+  .logo-footer {
+    width: 112px;
+    @media #{$bootstrap-xs} {
+      margin-top: 25px;
+      margin-bottom: 5px;
+    }
+    @media #{$bootstrap-sm} {
+      margin-top: 35px;
+      margin-bottom: 25px;
+    }
+    @media #{$bootstrap-md} {
+      margin-top: 15px;
+    }
+  }
+  .footer-hr {
+    width: 100%;
+    border-top: 1px solid #656667;
+    margin-bottom: 0;
+    @media #{$bootstrap-sm} {
+      margin-top: 20px;
+    }
+    @media #{$bootstrap-md} {
+      margin-top: 0;
+    }
+  }
+  @media #{$bootstrap-xs} {
+    .footer-hr {
+      display: none;
+    }
+  }
+  .left-block {
+    margin-top: 25px;
+    display: inline-block;
+    a {
+      font-family: $ubuntu-light-font, "sans-serif";
+      color: #656667;
+      font-size: 0.938em;
+      font-weight: 300;
+      line-height: 24px;
+      text-align: left;
+      margin-right: 20px;
+      text-decoration: none;
+      @media #{$bootstrap-xs} {
+        display: block;
+        margin-bottom: 5px;
+      }
+      @media #{$bootstrap-sm} {
+        display: inline-block;
+      }
+    }
+  }
+  .footer-hr-mobile {
+    width: 100%;
+    border-top: 1px solid #656667;
+    margin-bottom: 0;
+  }
+  .right-block {
+    margin-top: 25px;
+    @media #{$bootstrap-sm} {
+      float: left;
+      margin-bottom: 25px;
+    }
+    @media #{$bootstrap-md} {
+      float: right;
+      margin-bottom: 0;
+    }
+    a {
+      font-family: $ubuntu-light-font, "sans-serif";
+      color: #656667;
+      font-size: 0.938em;
+      font-weight: 300;
+      line-height: 24px;
+      text-align: left;
+      margin-right: 20px;
+      text-decoration: none;
+      @media #{$bootstrap-xs} {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      @media #{$bootstrap-sm} {
+        display: inline-block;
+      }
+    }
+
+    a.last {
+      margin-right: 0;
+    }
+    p.no-link {
+      font-family: $ubuntu-light-font, "sans-serif";
+      color: #656667;
+      font-size: 0.938em;
+      font-weight: 300;
+      line-height: 24px;
+      text-align: left;
+      margin-right: 20px;
+      @media #{$bootstrap-xs} {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      @media #{$bootstrap-sm} {
+        display: inline-block;
+        margin-top: 0;
+      }
+    }
+  }
+}

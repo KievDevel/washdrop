@@ -1,0 +1,94 @@
+@import "mixins";
+
+body {
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: "UBUNTU-MEDIUM";
+  src: url("../fonts/UBUNTU-MEDIUM.eot");
+  src: url("../fonts/UBUNTU-MEDIUM.eot#iefix") format("embedded-opentype"),
+  url("../fonts/UBUNTU-MEDIUM.woff") format("woff"),
+  url("../fonts/UBUNTU-MEDIUM.otf") format("opentype"),
+  url("../fonts/UBUNTU-MEDIUM.ttf") format("truetype"),
+  url("../fonts/UBUNTU-MEDIUM.svg#UBUNTU-MEDIUM") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SummerFont";
+  src: url("../fonts/Summer-Font-Light.eot");
+  src: url("../fonts/Summer-Font-Light.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/Summer-Font-Light.woff") format("woff"),
+  url("../fonts/Summer-Font-Light.otf") format("opentype"),
+  url("../fonts/Summer-Font-Light.ttf") format("truetype"),
+  url("../fonts/Summer-Font-Light.svg#SummerFont") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "UBUNTU-REGULAR";
+  src: url("../fonts/UBUNTU-REGULAR.eot");
+  src: url("../fonts/UBUNTU-REGULAR.eot#iefix") format("embedded-opentype"),
+  url("../fonts/UBUNTU-REGULAR.woff") format("woff"),
+  url("../fonts/UBUNTU-REGULAR.otf") format("opentype"),
+  url("../fonts/UBUNTU-REGULAR.ttf") format("truetype"),
+  url("../fonts/UBUNTU-REGULAR.svg#UBUNTU-REGULAR") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "UBUNTU-LIGHT";
+  src: url("../fonts/UBUNTU-LIGHT.eot");
+  src: url("../fonts/UBUNTU-LIGHT.eot#iefix") format("embedded-opentype"),
+  url("../fonts/UBUNTU-LIGHT.woff") format("woff"),
+  url("../fonts/UBUNTU-LIGHT.otf") format("opentype"),
+  url("../fonts/UBUNTU-LIGHT.ttf") format("truetype"),
+  url("../fonts/UBUNTU-LIGHT.svg#UBUNTU-LIGHT") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "UBUNTU-BOLD";
+  src: url("../fonts/UBUNTU-BOLD.eot");
+  src: url("../fonts/UBUNTU-BOLD.eot#iefix") format("embedded-opentype"),
+  url("../fonts/UBUNTU-BOLD.woff") format("woff"),
+  url("../fonts/UBUNTU-BOLD.otf") format("opentype"),
+  url("../fonts/UBUNTU-BOLD.ttf") format("truetype"),
+  url("../fonts/UBUNTU-BOLD.svg#UBUNTU-BOLD") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$summer-font: "SummerFont";
+$ubuntu-medium-font: "UBUNTU-MEDIUM";
+$ubuntu-regular-font: "UBUNTU-REGULAR";
+$ubuntu-light-font: "UBUNTU-LIGHT";
+$ubuntu-bold-font: "UBUNTU-BOLD";
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+@media #{$bootstrap-sm} {
+  .first-screen-animation {
+    opacity: 0;
+    bottom: -10vh;
+  }
+}
+
+@import "navbar";
+@import "main-screen-home";
+@import "application-download";
+@import "how-it-work";
+@import "photo-block";
+@import "subscription-and-price";
+@import "reviews-block";
+@import "discount-block";
+@import "footer";
+@import "popup";
+@import "FAQ";
+@import "news";
+@import "other-news";
+@import "navbar-mobile";

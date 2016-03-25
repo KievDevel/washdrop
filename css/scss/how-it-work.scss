@@ -1,0 +1,100 @@
+.how-it-work-block {
+  .how-it-work {
+    text-align: center;
+    h2 {
+      font-family: $summer-font, "sans-serif";
+      color:  #4a4b4c;
+      font-weight: 300;
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 60px;
+      @media #{$bootstrap-xs} {
+        font-size: 4.063em;
+        line-height: 60px;
+      }
+      @media #{$bootstrap-sm} {
+        font-size: 6.25em;
+        line-height: 100px;
+      }
+    }
+    h3 {
+      font-family: $summer-font, "sans-serif";
+      color:  rgb(60, 170, 210);
+      font-size: 3.125em;
+      font-weight: 300;
+      text-align: center;
+      text-transform: uppercase;
+      @media #{$bootstrap-xs} {
+        line-height: 60px;
+      }
+      @media #{$bootstrap-sm} {
+        line-height: 100px;
+      }
+    }
+    img {
+      margin-top: 25px;
+    }
+    .steps {
+      width: 93%;
+    }
+  }
+  .text-for-how-it-work {
+    margin-bottom: 60px;
+  }
+  .no-padding {
+    padding: 0;
+    h2 {
+      font-family: $ubuntu-light-font, "sans-serif";
+      color:  #4a4b4c;
+      font-size: 1.188em;
+      font-weight: 300;
+      line-height: 20px;
+      text-align: center;
+      @media #{$bootstrap-sm} {
+        min-height: 45px;
+      }
+      @media #{$bootstrap-md} {
+        min-height: 20px;
+      }
+    }
+    p {
+      font-family: $ubuntu-light-font, "sans-serif";
+      color:  #3caad2;
+      font-size: 0.938em;
+      font-weight: 300;
+      line-height: 20px;
+      text-align: center;
+    }
+  }
+}
+
+.how-it-work-mobile {
+  text-align: center;
+  img {
+    width: 100%;
+    max-width: 180px;
+  }
+  .first-img {
+    margin-top: 45px;
+  }
+  h2 {
+    font-family: $ubuntu-light-font, "sans-serif";
+    color:  #4a4b4c;
+    font-size: 1.188em;
+    font-weight: 300;
+    line-height: 20px;
+    text-align: center;
+  }
+  p {
+    font-family: $ubuntu-light-font, "sans-serif";
+    color:  #3caad2;
+    font-size: 0.938em;
+    font-weight: 300;
+    line-height: 20px;
+    text-align: center;
+    padding: 0 25px;
+  }
+  p:last-child {
+    margin-bottom: 55px;
+  }
+}
