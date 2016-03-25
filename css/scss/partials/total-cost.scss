@@ -1,0 +1,65 @@
+.total-cost-block {
+  @media #{$bootstrap-xs} {
+    height: 238px;
+  }
+  @media #{$bootstrap-sm} {
+    height: 122px;
+  }
+  .sum {
+    margin-bottom: 30px;
+    @media #{$bootstrap-xs} {
+      text-align: center;
+    }
+    .address-hr {
+      background-color: #e5e5e5;
+      height: 1px;
+      margin-top: 0;
+    }
+    .total-cost {
+      font-family: $summer-font, "sans-serif";
+      color: #3e4041;
+      font-size: 3.125em;
+      font-weight: 300;
+      line-height: 50px;
+      text-align: left;
+      display: inline-block;
+      margin-right: 40px;
+      margin-top: 10px;
+      @media #{$bootstrap-xs} {
+        margin-right: 0;
+      }
+    }
+    .summary {
+      font-family: $summer-font, "sans-serif";
+      color: #3caad2;
+      font-size: 3.125em;
+      font-weight: 300;
+      line-height: 50px;
+      text-align: left;
+      display: inline-block;
+      @media #{$bootstrap-xs} {
+        display: block;
+        text-align: center;
+      }
+    }
+    .btn-next {
+      float: right;
+      width: 170px;
+      height: 41px;
+      font-family: $ubuntu-bold-font, "sans-serif";
+      margin-top: 15px;
+      @media #{$bootstrap-xs} {
+        float: none;
+      }
+      .icon-next {
+        margin-left: 5px;
+      }
+    }
+    .basket-style {
+      width: 370px;
+    }
+    .basket-style-sm {
+      width: 270px;
+    }
+  }
+}

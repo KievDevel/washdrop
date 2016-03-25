@@ -1,0 +1,169 @@
+.main-screen-faq {
+  .first-bg {
+    background: rgba(210, 214, 220, 0.8) url(../img/photo-faq.jpg) 50% 50% fixed;
+    background-size: cover;
+    height: 50vh;
+    width: 100%;
+    position: absolute;
+    @media #{$bootstrap-xs} {
+      height: 100vh;
+    }
+    .logo-mobile {
+      position: absolute;
+      left: 50%;
+      margin-left: -85px;
+      margin-top: 10px;
+    }
+  }
+  .content {
+    height: 50vh;
+    @media #{$bootstrap-xs} {
+      height: 100vh;
+    }
+    .header {
+      font-family: $summer-font, "sans-serif";
+      color: #fefefe;
+      font-weight: 300;
+      text-align: center;
+      text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.25);
+      @media #{$bootstrap-xs} {
+        font-size: 3.125em;
+        line-height: 60px;
+        margin-top: 45vh;
+      }
+      @media #{$bootstrap-sm} {
+        font-size: 7.4em;
+        line-height: 90px;
+        margin-top: 22vh;
+      }
+    }
+  }
+}
+
+.question-faq-block {
+  .cont-hr {
+    background-color:  #cbcbcb;
+    height: 1px;
+    margin-top: 55px;
+  }
+  .questions {
+    margin-top: 50px;
+    p {
+      font-family: $ubuntu-light-font, "sans-serif";
+      color:  #3caad2;
+      font-size: 0.938em;
+      font-weight: 300;
+      line-height: 40px;
+      text-align: center;
+    }
+    span {
+      text-decoration: underline;
+    }
+  }
+  .first-order {
+    text-align: center;
+    h2 {
+      font-family: $summer-font, "sans-serif";
+      color:  #4a4b4c;
+      font-weight: 300;
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 35px;
+      @media #{$bootstrap-xs} {
+        font-size: 4.063em;
+        line-height: 60px;
+      }
+      @media #{$bootstrap-sm} {
+        font-size: 5em;
+        line-height: 90px;
+      }
+    }
+    img {
+      margin-bottom: 15px;
+    }
+  }
+  .accordion {
+
+  }
+  .accordion > div{
+
+    cursor:pointer;
+  }
+  .accordion-item {
+   min-height: 55px;
+  }
+  .accordion-button{
+
+  }
+  .accordion-button .accordion-block .question {
+    position:relative;
+    font-family: $ubuntu-light-font, "sans-serif";
+    color:  #4a4b4c;
+    font-size: 1.188em;
+    font-weight: 300;
+    line-height: 40px;
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-top: 12px;
+    max-width: 85%;
+  }
+  .accordion .accordion-block{
+    font-size:16px;
+    background-color:#fff;
+    border-top:1px solid #cbcbcb;
+    cursor:pointer;
+    margin: 0;
+  }
+  .accordion-item:last-child {
+    border-bottom:1px solid #cbcbcb;
+  }
+  .accordion-marker{
+    border-radius: 50%;
+    background-color:  rgba(60, 170, 210, 0.5);
+    width: 36px;
+    height: 36px;
+    float: right;
+    padding: 0;
+    max-width: 15%;
+    margin-top: 14px;
+    outline: none;
+  }
+  .accordion-marker:hover {
+    background-color:  #3caad2;
+  }
+  .accordion-marker i{
+    padding-top:10px;
+    padding-left:13px;
+  }
+  .accordion-marker .fa-angle-down{
+    color:#ffffff;
+  }
+  .accordion p {
+    max-height:0;
+    overflow:hidden;
+    transition: max-height 350ms ease-in-out;
+    color: #3caad2;
+    font-size: 0.938em;
+    font-weight: 300;
+    line-height: 20px;
+    text-align: left;
+    max-width: 85%;
+  }
+  .accordion > div.active .accordion-marker{
+    background-color:  rgba(60, 170, 210, 0.5);
+    &:hover {
+      background-color:  #3caad2;
+    }
+  }
+  .accordion > div.active .question{
+    color:#000;
+  }
+  .accordion > div.active .accordion-marker .fa-angle-up{
+    color:#fff;
+  }
+  .accordion > div.active p{
+    max-height:200px;
+  }
+}
+

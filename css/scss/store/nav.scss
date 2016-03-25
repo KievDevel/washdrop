@@ -1,0 +1,326 @@
+.navbar-washdrop-store {
+  height: 110px;
+  background-color: #3e4041;
+  border: none;
+  border-radius: 0;
+  .my-navbar {
+    .navbar-brand {
+      img {
+        width: 137px;
+      }
+    }
+    .navbar-menu {
+      margin-top: 29px;
+      border-radius: 10px;
+      background-color:  rgba(255, 255, 255, 0.05);
+      height: 50px;
+      .navbar-left-store>li>a {
+        line-height: 20px;
+      }
+      .navbar-right {
+        margin-right: 15px;
+        height: 50px;
+        .nav-market-btn {
+          display: inline-block;
+          .btn-for-ios {
+            height: 30px;
+            border: none;
+            border-radius: 6px;
+            background-color:  #3caad2;
+            outline: none;
+            padding: 0;
+            @media #{$bootstrap-md} {
+              width: 30px;
+            }
+            @media #{$bootstrap-lg} {
+              width: 95px;
+            }
+            .apple-logo {
+              background: url(../img/apple-logo.png) no-repeat;
+              background-size: 14px 16px;
+              width: 14px;
+              height: 16px;
+              margin: 7px 5px 0 14px;
+              float: left;
+              @media #{$bootstrap-md} {
+                margin: -2px 0 0 8px;
+              }
+              @media #{$bootstrap-lg} {
+                margin: 6px 5px 0 14px;
+              }
+            }
+            .apple-text-btn {
+              color: #ffffff;
+              vertical-align: middle;
+              display: inline-block;
+              font-family: $ubuntu-medium-font, "sans-serif";
+              font-size: 0.75em;
+              font-weight: 500;
+              line-height: 30px;
+              text-align: left;
+              float: left;
+              margin-left: 2px;
+            }
+          }
+          .btn-for-android {
+            width: 95px;
+            height: 30px;
+            border: none;
+            border-radius: 6px;
+            background-color:  #3caad2;
+            outline: none;
+            margin-left: 5px;
+            @media #{$bootstrap-md} {
+              width: 30px;
+              padding-left: 9px;
+            }
+            @media #{$bootstrap-lg} {
+              width: 95px;
+              padding-left: 12px;
+            }
+            .google-logo {
+              background: url(../img/google-logo-store.png) no-repeat;
+              float: left;
+
+              @media #{$bootstrap-md} {
+                background-size: 70px 16px;
+                width: 16px;
+                height: 16px;
+              }
+              @media #{$bootstrap-lg} {
+                background-size: 70px 16px;
+                width: 70px;
+                height: 16px;
+              }
+            }
+          }
+        }
+        .nav-basket {
+          display: inline-block;
+          width: 200px;
+          height: 50px;
+          margin-left: 15px;
+
+          .basket {
+            margin: 13px 13px 0 0;
+            float: left;
+          }
+          .text-basket {
+            font-family: $ubuntu-regular-font, "sans-serif";
+            color:  #ffffff;
+            font-size: 0.875em;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+            text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+            margin-top: 12px;
+            .pick-items {
+              color: rgb(243, 156, 18);
+              margin-left: 5px;
+              border-bottom: 2px dotted;
+            }
+          }
+        }
+
+        .nav-enter {
+          display: inline-block;
+          margin-top: 10px;
+          .btn-enter {
+            border-radius: 5px;
+            border: 2px solid #ffffff;
+            background-color: rgba(60, 170, 210, 0);
+            box-shadow: 1px 3px 1px 0px rgba(0, 0, 0, 0.2);
+            width: 104px;
+            height: 32px;
+            font-family: $ubuntu-medium-font, "sans-serif";
+            color: #ffffff;
+            font-size: 0.938em;
+            font-weight: 500;
+            line-height: 30px;
+            text-align: left;
+            text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+            padding: 0;
+            outline: none;
+            .sing-in-icon {
+              margin: 0 10px;
+            }
+          }
+          .btn-drop {
+            border-radius: 5px;
+            border: 1px solid #e5e5e5;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            box-shadow: 1px 3px 1px 0px rgba(0, 0, 0, 0.2);
+            max-width: 240px;
+            height: 30px;
+            padding: 0;
+            font-family: $ubuntu-regular-font, "sans-serif";
+            color:  #3e4041;
+            font-size: 0.938em;
+            font-weight: 400;
+            line-height: 30px;
+            text-align: left;
+            width: 260px;
+            z-index: 2;
+            .user-icon {
+              margin: 0 10px 0 10px;
+              float: left;
+              line-height: 30px;
+            }
+            .sort-icon {
+              margin: 0 5px 0 5px;
+              float: right;
+              line-height: 24px;
+            }
+          }
+          .btn-group {
+            .drop-menu-pc {
+              width: 240px;
+              margin-top: -5px;
+              z-index: 1;
+              border-radius: 0 0 6px 6px;
+              border: 1px solid #e5e5e5;
+              .angle-icon {
+                margin-right: 10px;
+                color:  #4a4b4c;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+                text-align: left;
+              }
+              .nav-pc {
+                font-family: $ubuntu-light-font, "sans-serif";
+                color: #4a4b4c;
+                font-size: 0.875em;
+                font-weight: 300;
+                line-height: 20px;
+                text-align: left;
+                padding: 5px 10px 5px 15px;
+              }
+              >li>a:hover {
+                text-decoration: underline;
+                color: #3caad2;
+                background-color: transparent;
+              }
+              .divider {
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.subscription, .wrap {
+  .pushy {
+    width: 250px;
+  }
+  .pushy-left{
+    -webkit-transform: translate3d(250px,0,0);
+    -moz-transform: translate3d(250px,0,0);
+    -ms-transform: translate3d(250px,0,0);
+    -o-transform: translate3d(250px,0,0);
+    transform: translate3d(250px,0,0);
+  }
+  .container-push, .push-push{
+    -webkit-transform: translate3d(-250px,0,0);
+    -moz-transform: translate3d(-250px,0,0);
+    -ms-transform: translate3d(-250px,0,0);
+    -o-transform: translate3d(-250px,0,0);
+    transform: translate3d(-250px,0,0);
+  }
+}
+
+#container-store {
+  background-color:  #3e4041;
+  height: 110px;
+  position: relative;
+  width: 100%;
+  .menu-btn-store {
+    position: absolute;
+    right: 0;
+    margin: 35px 20px;
+  }
+  .logo-store {
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    img {
+      width: 137px;
+      height: 80px;
+    }
+  }
+}
+
+.pushy-store {
+  background-color:  #3e4041;
+  .btn-for-ios {
+    width: 95px;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
+    background-color:  #3caad2;
+    outline: none;
+    padding: 0;
+    margin-left: 25px;
+    margin-right: 5px;
+    margin-top: 25px;
+    .apple-logo {
+      background: url(../img/apple-logo.png) no-repeat;
+      background-size: 14px 16px;
+      width: 14px;
+      height: 16px;
+      margin: 6px 5px 0 14px;
+      float: left;
+    }
+    .apple-text-btn {
+      color: #ffffff;
+      vertical-align: middle;
+      height: 100%;
+      display: inline-block;
+      font-family: $ubuntu-medium-font, "sans-serif";
+      font-size: 0.750em;
+      font-weight: 500;
+      line-height: 30px;
+      text-align: left;
+      float: left;
+      margin-left: 2px;
+    }
+  }
+  .btn-for-android {
+    width: 95px;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
+    background-color:  #3caad2;
+    outline: none;
+    margin-top: 25px;
+    .google-logo {
+      float: left;
+      background: url(../img/logo-google.png) no-repeat;
+      background-size: 70px 16px;
+      width: 70px;
+      height: 16px;
+    }
+  }
+}
+
+.pushy-store a {
+  display: inline-block;
+  padding-left: 25px;
+  padding-right: 0;
+}
+
+.close-btn-store {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+.close-block-store {
+  height: 110px;
+}
+
+.phone-number {
+  margin-top: 20px;
+}

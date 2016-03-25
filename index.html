@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WashDrop</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/scrolling-nav.css">
-    <link rel="stylesheet" href="css/pushy.css">
 </head>
-<body>
+<body class="landing">
 
 <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
@@ -24,14 +22,43 @@
             <div class="modal-footer">
                 <input type="text" class="login" placeholder="Логин">
                 <input type="text" class="password" placeholder="Пароль">
+                <p class="error-message">Введен не верный логин или пароль</p>
                 <div class="forgot-password">
-                    <a href="#">Забыли пароль?</a>
+                    <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#LosePassword">Забыли пароль?</a>
                 </div>
-                <button class="btn btn-enter">ВОЙТИ</button>
+                <button id="login" class="btn btn-orange btn-enter">ВОЙТИ</button>
             </div>
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="LosePassword" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times close-icon"></i></button>
+            </div>
+            <div class="modal-sended-email" style="display: none;">
+                <p class="sended-text">Инструкции по восстановлению пароля отправлены на</p>
+                <p id="your-mail" class="sended-text your-email"></p>
+            </div>
+            <div class="modal-body fade-password">
+                <p>Введите Ваш e-mail</p>
+            </div>
+            <div class="modal-footer fade-password">
+                <!--<form>-->
+                    <input type="email" class="city" id="email" placeholder="test@gmail.com" required>
+                    <button id="send-email" type="submit" class="btn btn-orange btn-next">ДАЛЕЕ
+                        <i class="fa fa-angle-double-right"></i>
+                    </button>
+                <p class="error-message">В email адресе допущена mistake</p>
+                <!--</form>-->
+            </div>
+        </div>
+
+    </div>
+</div>
+
 
 <div class="modal fade" id="myModalLegal" role="dialog">
     <div class="modal-dialog">
@@ -70,7 +97,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="myModalWhereYou" role="dialog">
+<div id="modal-pick-city" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -80,8 +107,8 @@
                 <p>Откуда Вы?</p>
             </div>
             <div class="modal-footer">
-                <input type="text" class="city" placeholder="Ваш город*">
-                <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#myModalSingUp" class="btn btn-next">
+                <input id="city-autocomplete" type="text" class="city" placeholder="Ваш город*">
+                <a id="modal-open-city" class="btn btn-next">
                     ДАЛЕЕ <i class="fa fa-angle-double-right"></i>
                 </a>
             </div>
@@ -90,7 +117,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="myModalSingUp" role="dialog">
+<div class="modal fade" id="modal-no-city" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -103,16 +130,14 @@
                 <h2>Подпишитесь</h2>
                 <p>Чтобы быть в курсе новостей и специальных предложений</p>
                 <input type="text" class="email" placeholder="Ваш email">
-                <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#myModalDistribution">
-                    <button class="btn btn-sing-up">ПОДПИСАТЬСЯ</button>
-                </a>
+                <button id="modal-open-sub-success" class="btn btn-sing-up">ПОДПИСАТЬСЯ</button>
             </div>
         </div>
 
     </div>
 </div>
 
-<div class="modal fade" id="myModalDistribution" role="dialog">
+<div class="modal fade" id="modal-subscription-success" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -134,19 +159,15 @@
     <div class="container">
         <div class="collapse navbar-collapse my-navbar" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="#how-it-work" class="page-scroll">КАК ЭТО РАБОТАЕТ?</a></li>
-                <li><a href="#our-price" class="page-scroll">НАШИ ЦЕНЫ</a></li>
-                <li><a href="#">КОНТАКТЫ</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="news.html">НОВОСТИ</a></li>
             </ul>
-            <ul class="nav navbar-nav logo">
-                <a class="navbar-brand hidden-xs" href="#">
-                    <img src="img/logo.png">
-                </a>
+            <ul class="nav navbar-nav logo-landing logo-center-class">
+                <li><a class="navbar-brand hidden-xs" href="#"><img src="img/logo.png" alt=""></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right my-navbar-right">
-                <li>
-                    <button type="submit" class="btn btn-default btn-navbar">СДЕЛАТЬ ЗАКАЗ</button>
-                </li>
+                <li><a>+7 (495) 223-12-23</a></li>
+                <li><button type="submit" class="btn btn-default btn-navbar">СДЕЛАТЬ ЗАКАЗ</button></li>
             </ul>
         </div>
     </div>
@@ -155,33 +176,34 @@
 <!-- Mobile NAVBAR -->
 <nav class="pushy pushy-left visible-xs-block visible-sm-block">
     <ul>
-        <li class="close-block"><button class="menu-btn close-btn"><img src="img/close-icon.png"></button></li>
-        <li><a href="#how-it-work" class="page-scroll nav-text-mobile">КАК ЭТО РАБОТАЕТ?</a></li>
-        <li><a href="#our-price" class="page-scroll nav-text-mobile">НАШИ ЦЕНЫ</a></li>
-        <li><a href="#" class="nav-text-mobile">КОНТАКТЫ</a></li>
+        <li class="close-block"><button class="menu-btn close-btn"><img src="img/close-icon.png" alt=""></button></li>
+        <li><a href="FAQ.html" class="nav-text-mobile">FAQ</a></li>
+        <li><a href="news.html" class="nav-text-mobile">НОВОСТИ</a></li>
     </ul>
     <button type="submit" class="btn btn-default btn-navbar-mobile center-block">СДЕЛАТЬ ЗАКАЗ</button>
+    <ul class="phone-number">
+        <li><a>+7 (495) 223-12-23</a></li>
+    </ul>
 </nav>
 
 <div class="site-overlay visible-xs-block visible-sm-block"></div>
 
 <div id="container" class="visible-xs-block visible-sm-block">
-    <div class="menu-btn"><img src="img/menu-icon.png"></div>
+    <div class="menu-btn"><img src="img/menu-icon.png" alt=""></div>
 </div>
-
 <!-- end mobile-nav-->
 
 <div id="full-page">
 
     <div class="main-screen-home">
         <div class="container-fluid first-bg">
-            <img src="img/logo.png" class="visible-xs-block visible-sm-block logo-mobile">
+            <a href="#"><img src="img/logo.png" class="visible-xs-block visible-sm-block logo-mobile" alt=""></a>
         </div>
         <div class="container content">
             <div class="row">
                 <div class="col-sm-12 first-screen-animation">
                     <h1 class="header">Ваша персональная прачечная и химчистка</h1>
-                    <button class="make-order-btn center-block" data-toggle="modal" data-target="#myModalWhereYou">СДЕЛАТЬ ПЕРВЫЙ ЗАКАЗ</button>
+                    <button class="make-order-btn center-block" data-toggle="modal" data-target="#modal-pick-city">СДЕЛАТЬ ПЕРВЫЙ ЗАКАЗ</button>
                     <p class="center-block order-before">Уже заказывали раньше?
                         <a href="#" data-toggle="modal" data-target="#myModal">ВОЙТИ</a><i class="fa fa-angle-right arrow"></i>
                     </p>
@@ -200,11 +222,11 @@
                     <div class="phone-app-bg slide-left" data-plugin-options='{"reverse":false}'></div>
                     <div class="block-for-app-btn slide-top" data-plugin-options='{"reverse":false}'>
                         <button class="btn-for-android">
-                            <div class="google-logo"></div>
+                            <span class="google-logo"></span>
                         </button>
                         <button class="btn-for-ios">
-                            <div class="apple-logo"></div>
-                            <div class="apple-text-btn">App store</div>
+                            <span class="apple-logo"></span>
+                            <span class="apple-text-btn">App store</span>
                         </button>
                     </div>
                 </div>
@@ -212,78 +234,74 @@
         </div>
     </div>
 
-    <section id="how-it-work">
-        <div class="how-it-work-block">
-            <div class="container fade-bottom">
-                <div class="how-it-work slide-bottom" data-plugin-options='{"reverse":false}'>
-                    <h2>Как это работает</h2>
-                    <img src="img/dot-blue.png">
-                    <h3>4 простых шага</h3>
-                    <img src="img/steps.png" class="steps hidden-xs">
+
+    <div class="how-it-work-block">
+        <div class="container">
+            <div class="how-it-work fade-bottom">
+                <h2  class="slide-bottom" data-plugin-options='{"reverse":false}'>Как это работает</h2>
+                <img class="slide-bottom" data-plugin-options='{"reverse":false}' src="img/dot-blue.png" alt="">
+                <h3  class="slide-bottom" data-plugin-options='{"reverse":false}'>4 простых шага</h3>
+                <img class="slide-bottom steps hidden-xs" data-plugin-options='{"reverse":false}' src="img/steps.png" alt="">
+            </div>
+            <div class="row text-for-how-it-work hidden-xs fade-bottom">
+                <div class="col-sm-3 no-padding slide-bottom" data-plugin-options='{"reverse":false}'>
+                    <h2>Вы размещаете заказ</h2>
+                    <p>используя наш сайт или мобильное приложение</p>
                 </div>
-                <div class="row text-for-how-it-work hidden-xs slide-bottom" data-plugin-options='{"reverse":false}'>
-                    <div class="col-sm-3 no-padding">
-                        <h2>Вы размещаете заказ</h2>
-                        <p>используя наш сайт или мобильное приложение</p>
-                    </div>
-                    <div class="col-sm-3 no-padding">
-                        <h2>Мы забираем вещи</h2>
-                        <p>от вашего порога и в удобное для Вас время</p>
-                    </div>
-                    <div class="col-sm-3 no-padding" >
-                        <h2>Мы чистим и стираем</h2>
-                        <p>с использованием самого современного оборудования</p>
-                    </div>
-                    <div class="col-sm-3 no-padding">
-                        <h2>Мы возвращаем вещи</h2>
-                        <p>уже на следующий день</p>
+                <div class="col-sm-3 no-padding slide-bottom" data-plugin-options='{"reverse":false}'>
+                    <h2>Мы забираем вещи</h2>
+                    <p>от вашего порога и в удобное для Вас время</p>
+                </div>
+                <div class="col-sm-3 no-padding slide-bottom" data-plugin-options='{"reverse":false}'>
+                    <h2>Мы чистим и стираем</h2>
+                    <p>с использованием самого современного оборудования</p>
+                </div>
+                <div class="col-sm-3 no-padding slide-bottom" data-plugin-options='{"reverse":false}'>
+                    <h2>Мы возвращаем вещи</h2>
+                    <p>уже на следующий день</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container fade-bottom">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="how-it-work-mobile">
+                    <div class="clearfix visible-xs-block">
+                        <img src="img/how-mobile-1.png" class="first-img slide-bottom" data-plugin-options='{"reverse":false}' alt="">
+                        <h2 class="slide-bottom" data-plugin-options='{"reverse":false}'>
+                            Вы размещаете заказ
+                        </h2>
+                        <p class="slide-bottom" data-plugin-options='{"reverse":false}'>
+                            используя наш сайт или мобильное приложение
+                        </p>
+                        <img src="img/mobile-how-2.png" class="slide-bottom" data-plugin-options='{"reverse":false}' alt="">
+                        <h2 class="slide-bottom" data-plugin-options='{"reverse":false}'>
+                            Мы забираем вещи
+                        </h2>
+                        <p class="slide-bottom" data-plugin-options='{"reverse":false}'>
+                            от вашего порога и в удобное для Вас время
+                        </p>
+                        <img src="img/mobile-how-3.png" class="slide-bottom" data-plugin-options='{"reverse":false}' alt="">
+                        <h2 class="slide-bottom" data-plugin-options='{"reverse":false}'>
+                            Мы чистим и стираем
+                        </h2>
+                        <p class="slide-bottom" data-plugin-options='{"reverse":false}'>
+                            с использованием самого современного оборудования
+                        </p>
+                        <img src="img/mobile-how-4.png" class="slide-bottom" data-plugin-options='{"reverse":false}' alt="">
+                        <h2 class="slide-bottom" data-plugin-options='{"reverse":false}'>
+                            Мы возвращаем вещи
+                        </h2>
+                        <p class="slide-bottom" data-plugin-options='{"reverse":false}'>
+                            уже на следующий день
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section id="how-it-work-mobile">
-        <div class="container fade-bottom">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="how-it-work-mobile">
-                        <div class="clearfix visible-xs-block">
-                            <img src="img/how-mobile-1.png" class="first-img slide-bottom" data-plugin-options='{"reverse":false}'>
-                            <h2 class="slide-bottom" data-plugin-options='{"reverse":false}'>
-                                Вы размещаете заказ
-                            </h2>
-                            <p class="slide-bottom" data-plugin-options='{"reverse":false}'>
-                                используя наш сайт или мобильное приложение
-                            </p>
-                            <img src="img/mobile-how-2.png" class="slide-bottom" data-plugin-options='{"reverse":false}'>
-                            <h2 class="slide-bottom" data-plugin-options='{"reverse":false}'>
-                                Мы забираем вещи
-                            </h2>
-                            <p class="slide-bottom" data-plugin-options='{"reverse":false}'>
-                                от вашего порога и в удобное для Вас время
-                            </p>
-                            <img src="img/mobile-how-3.png" class="slide-bottom" data-plugin-options='{"reverse":false}'>
-                            <h2 class="slide-bottom" data-plugin-options='{"reverse":false}'>
-                                Мы чистим и стираем
-                            </h2>
-                            <p class="slide-bottom" data-plugin-options='{"reverse":false}'>
-                                с использованием самого современного оборудования
-                            </p>
-                            <img src="img/mobile-how-4.png" class="slide-bottom" data-plugin-options='{"reverse":false}'>
-                            <h2 class="slide-bottom" data-plugin-options='{"reverse":false}'>
-                                Мы возвращаем вещи
-                            </h2>
-                            <p class="slide-bottom" data-plugin-options='{"reverse":false}'>
-                                уже на следующий день
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
+    </div>
 
     <div class="photo-block fade-bottom">
         <div class="container slide-bottom" data-plugin-options='{"reverse":false}'>
@@ -293,7 +311,7 @@
                         <div class="header-text">
                             <h3>Вы ненавидите стирку и глажку?</h3>
                             <h2>Мы обожаем!</h2>
-                            <img src="img/dot-white.png">
+                            <img src="img/dot-white.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -307,7 +325,7 @@
                 <div class="col-sm-12">
                     <div class="subscribe slide-bottom" data-plugin-options='{"reverse":false}'>
                         <h2>Подпишитесь</h2>
-                        <img src="img/dot-blue.png">
+                        <img src="img/dot-blue.png" alt="">
                         <h3>Чтобы быть в курсе новостей и специальных предложений</h3>
                     </div>
                     <div class="email slide-left" data-plugin-options='{"reverse":false}'>
@@ -320,40 +338,39 @@
         </div>
     </div>
 
-    <section id="our-price">
-        <div class="price-block">
-            <div class="container fade-bottom">
-                <div class="row">
-                    <div class="our-price">
-                        <div class="col-sm-12">
-                            <div class="header-price slide-bottom" data-plugin-options='{"reverse":false}'>
-                                <h2>Наши цены</h2>
-                                <img src="img/dot-blue.png">
-                            </div>
-                            <div class="col-sm-12 price-carousel">
-                                <div class="col-sm-4 slide-left" data-plugin-options='{"reverse":false}'>
-                                    <img src="img/shirt.png">
-                                    <h2>Рубашка</h2>
-                                    <p>от 190 рублей</p>
-                                </div>
-                                <div class="col-sm-4 slide-top" data-plugin-options='{"reverse":false}'>
-                                    <img src="img/jacket.png">
-                                    <h2>Пиджак</h2>
-                                    <p>от 390 рублей</p>
-                                </div>
-                                <div class="col-sm-4 slide-bottom" data-plugin-options='{"reverse":false}'>
-                                    <img src="img/linen.png" class="linen">
-                                    <h2 class="linen-text">Стирка постельного белья</h2>
-                                    <p>190 рублей за кг</p>
-                                </div>
-                            </div>
-                            <button class="btn btn-price slide-right" data-plugin-options='{"reverse":false}'>ВСЕ ЦЕНЫ</button>
+
+    <div class="price-block">
+        <div class="container fade-bottom">
+            <div class="row">
+                <div class="our-price">
+                    <div class="col-sm-12">
+                        <div class="header-price slide-bottom" data-plugin-options='{"reverse":false}'>
+                            <h2>Наши цены</h2>
+                            <img src="img/dot-blue.png" alt="">
                         </div>
+                        <div class="col-sm-12 price-carousel">
+                            <div class="col-sm-4 slide-left" data-plugin-options='{"reverse":false}'>
+                                <img src="img/shirt.png" alt="">
+                                <h2>Рубашка</h2>
+                                <p>от 190 рублей</p>
+                            </div>
+                            <div class="col-sm-4 slide-top" data-plugin-options='{"reverse":false}'>
+                                <img src="img/jacket.png" alt="">
+                                <h2>Пиджак</h2>
+                                <p>от 390 рублей</p>
+                            </div>
+                            <div class="col-sm-4 slide-bottom" data-plugin-options='{"reverse":false}'>
+                                <img src="img/linen.png" class="linen" alt="">
+                                <h2 class="linen-text">Стирка постельного белья</h2>
+                                <p>190 рублей за кг</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-price slide-right" data-plugin-options='{"reverse":false}'>ВСЕ ЦЕНЫ</button>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <div class="reviews-block">
         <div class="container">
@@ -361,7 +378,7 @@
                 <div class="col-sm-12 fade-bottom">
                     <div class="header-reviews slide-bottom" data-plugin-options='{"reverse":false}'>
                         <h2>Отзывы о нашей работе</h2>
-                        <img src="img/dot-blue.png">
+                        <img src="img/dot-blue.png" alt="">
                     </div>
                     <div class="col-sm-12 margin-reviews-block fade-bottom">
                         <div class="col-sm-4 slide-left" data-plugin-options='{"reverse":false}'>
@@ -413,11 +430,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 fade-bottom">
-                        <div class="col-sm-12 center-btn slide-left" data-plugin-options='{"reverse":false}'>
-                            <button class="btn btn-reviews">ВСЕ ОТЗЫВЫ</button>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -427,21 +439,21 @@
         <div class="container fade-bottom">
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="discount slide-bottom" data-plugin-options='{"reverse":false}'>
-                        <h2>Получите скидку 500 рублей</h2>
-                        <p>Для этого используйте промокод "Промокод" при оформлении заказа</p>
-                        <button class="btn btn-discount" >СДЕЛАТЬ ПЕРВЫЙ ЗАКАЗ</button>
+                    <div class="discount" >
+                        <h2 class="slide-bottom" data-plugin-options='{"reverse":false}'>Получите скидку 500 рублей</h2>
+                        <p class="slide-bottom" data-plugin-options='{"reverse":false}'>Для этого используйте промокод "Промокод" при оформлении заказа</p>
+                        <button class="btn btn-discount slide-bottom" data-plugin-options='{"reverse":false}'>СДЕЛАТЬ ПЕРВЫЙ ЗАКАЗ</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer>
+    <footer class="footer-landing">
         <div class="container fade-bottom">
             <div class="row">
                 <div class="col-xs-12 col-sm-2 mobile-logo slide-left" data-plugin-options='{"reverse":false}'>
-                    <img src="img/logo.png" class="logo-footer">
+                    <a href="#"><img src="img/logo.png" class="logo-footer" alt=""></a>
                     <hr class="mobile-footer-hr">
                 </div>
                 <div class="col-xs-12 col-sm-2 col-sm-offset-1 col-md-offset-0 col-lg-offset-1 slide-bottom" data-plugin-options='{"reverse":false}'>
@@ -450,16 +462,16 @@
                 </div>
                 <div class="col-xs-12 col-sm-3 slide-top" data-plugin-options='{"reverse":false}'>
                     <p>Принимаем к оплате карты:</p>
-                    <img src="img/visamastercard.png">
+                    <img src="img/visamastercard.png" alt="">
                 </div>
                 <div class="col-sm-4 col-md-5 col-lg-4 hidden-xs slide-bottom" data-plugin-options='{"reverse":false}'>
                     <div class="btn-right">
                         <button class="btn-apple">
-                            <div class="apple-logo"></div>
-                            <div class="apple-text-btn">App store</div>
+                            <span class="apple-logo"></span>
+                            <span class="apple-text-btn">App store</span>
                         </button>
                         <button class="btn-android">
-                            <div class="google-logo"></div>
+                            <span class="google-logo"></span>
                         </button>
                     </div>
                 </div>
@@ -471,6 +483,7 @@
                         <a href="#">Как это работает?</a>
                         <a href="#">Наши цены</a>
                         <a href="#">Контакты</a>
+                        <a class="hidden-md" >+7 (495) 223-12-23</a>
                     </div>
                 </div>
                 <div class="col-xs-12 visible-xs-block">
@@ -489,18 +502,16 @@
 
 </div>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="js/scrolling-nav.js"></script>
-<script src="js/jquery.easing.min.js"></script>
-<script src="js/jquery.fadethis.js"></script>
-<script src="js/mobile-detect.min.js"></script>
-<script src="js/jFade.js"></script>
+<script src="js/jquery-2.0.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script src="js/pushy.min.js"></script>
-
-
-<script>
-</script>
+<script src="js/jquery.autocomplete.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/mobile-detect.min.js"></script>
+<script src="js/jquery.fadethis.js"></script>
+<script src="js/Fade.js"></script>
+<script src="js/autocomplete.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 </html>

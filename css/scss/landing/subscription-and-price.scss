@@ -1,0 +1,211 @@
+.subscription-and-price-block {
+  .subscribe {
+    text-align: center;
+    h2 {
+      font-family: $summer-font, "sans-serif";
+      color: #4a4b4c;
+      font-weight: 300;
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 60px;
+      @media #{$bootstrap-xs} {
+        font-size: 4.063em;
+        line-height: 60px;
+      }
+      @media #{$bootstrap-sm} {
+        font-size: 6.25em;
+        line-height: 100px;
+      }
+    }
+    h3 {
+      font-family: $summer-font, "sans-serif";
+      color: #3caad2;
+      font-size: 3.125em;
+      font-weight: 300;
+      line-height: 100px;
+      text-align: center;
+      text-transform: uppercase;
+      @media #{$bootstrap-xs} {
+        line-height: 60px;
+      }
+      @media #{$bootstrap-sm} {
+        line-height: 100px;
+      }
+    }
+    img {
+      margin-top: 25px;
+    }
+  }
+  .email {
+    margin-bottom: 60px;
+    margin-top: 60px;
+    text-align: center;
+    .input-email {
+      border-radius: 6px;
+      border: 1px solid #cbcbcb;
+      box-sizing: border-box;
+      background-color: #f9f9f9;
+      height: 50px;
+      outline: none;
+      padding: 10px 10px 10px 20px;
+      ::-webkit-input-placeholder {
+        padding-left: 20px;
+        font-family: $ubuntu-light-font, "sans-serif";
+        color: #4a4b4c;
+        font-size: 1em;
+        font-weight: 300;
+        line-height: 24px;
+        text-align: left;
+      }
+      ::-moz-placeholder {
+        padding-left: 20px;
+        font-family: $ubuntu-light-font, "sans-serif";
+        color: #4a4b4c;
+        font-size: 1em;
+        font-weight: 300;
+        line-height: 24px;
+        text-align: left;
+      }
+      :-moz-placeholder {
+        padding-left: 20px;
+        font-family: $ubuntu-light-font, "sans-serif";
+        color: #4a4b4c;
+        font-size: 1em;
+        font-weight: 300;
+        line-height: 24px;
+        text-align: left;
+      }
+      :-ms-input-placeholder {
+        padding-left: 20px;
+        font-family: $ubuntu-light-font, "sans-serif";
+        color: #4a4b4c;
+        font-size: 1em;
+        font-weight: 300;
+        line-height: 24px;
+        text-align: left;
+      }
+      @media #{$bootstrap-xs} {
+        width: 90%;
+      }
+      @media #{$bootstrap-sm} {
+        width: 370px;
+      }
+    }
+    .input-btn {
+      border-radius: 6px;
+      border: none;
+      background-color: #3caad2;
+      &:hover {
+        background-color: #3d9bc3;
+      }
+      width: 200px;
+      height: 50px;
+      font-family: $ubuntu-regular-font, "sans-serif";
+      color: #ffffff;
+      font-size: 1em;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: center;
+      text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+      outline: none;
+      padding: 0 0 1px 0;
+      &:hover {
+        background-color: #3d9bc3;;
+      }
+      @media #{$bootstrap-xs} {
+        margin-left: 0;
+        margin-top: 40px;
+      }
+      @media #{$bootstrap-sm} {
+        margin-left: -20px;
+      }
+    }
+  }
+  .sub-hr {
+    background-color: #cbcbcb;
+    height: 1px;
+
+    @media #{$bootstrap-xs} {
+      width: 90%;
+    }
+
+    @media #{$bootstrap-sm} {
+      width: 100%;
+    }
+  }
+}
+
+.price-block {
+  .our-price {
+    text-align: center;
+    .header-price {
+      text-align: center;
+      margin-bottom: 60px;
+      h2 {
+        font-family: $summer-font, "sans-serif";
+        color: #4a4b4c;
+        font-size: 6.25em;
+        font-weight: 300;
+        line-height: 100px;
+        text-align: center;
+        @media #{$bootstrap-xs} {
+          font-size: 4.063em;
+          line-height: 60px;
+        }
+        @media #{$bootstrap-sm} {
+          font-size: 6.25em;
+          line-height: 100px;
+        }
+      }
+    }
+    .btn-price {
+      border-radius: 6px;
+      background-color: #3caad2;
+      width: 136px;
+      height: 50px;
+      font-family: $ubuntu-light-font, "sans-serif";
+      color: #ffffff;
+      font-size: 1em;
+      font-weight: 300;
+      line-height: 24px;
+      text-align: center;
+      text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+      margin-bottom: 60px;
+      outline: none;
+      &:hover {
+        background-color: #3d9bc3;;
+      }
+    }
+    .price-carousel {
+      margin-bottom: 60px;
+      h2 {
+        font-family: $ubuntu-light-font, "sans-serif";
+        color: #4a4b4c;
+        font-size: 1.188em;
+        font-weight: 300;
+        line-height: 34px;
+        text-align: center;
+        @media #{$bootstrap-sm} {
+          min-height: 70px;
+        }
+        @media #{$bootstrap-md} {
+          min-height: 20px;
+        }
+      }
+      p {
+        font-family: $ubuntu-light-font, "sans-serif";
+        color: #3caad2;
+        font-size: 1.313em;
+        font-weight: 300;
+        line-height: 34px;
+        text-align: center;
+      }
+      .linen {
+        margin-top: 20px;
+      }
+      .linen-text {
+        margin-top: 27px;
+      }
+    }
+  }
+}

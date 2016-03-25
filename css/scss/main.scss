@@ -1,7 +1,14 @@
 @import "mixins";
 
+html,
 body {
+  height: 100%;
   font-size: 16px;
+}
+
+@font-face {
+  font-family: "FontAwesome";
+  src: url("../fonts/fontawesome.woff");
 }
 
 @font-face {
@@ -15,6 +22,7 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "SummerFont";
   src: url("../fonts/Summer-Font-Light.eot");
@@ -26,6 +34,7 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "UBUNTU-REGULAR";
   src: url("../fonts/UBUNTU-REGULAR.eot");
@@ -37,6 +46,7 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "UBUNTU-LIGHT";
   src: url("../fonts/UBUNTU-LIGHT.eot");
@@ -48,6 +58,7 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "UBUNTU-BOLD";
   src: url("../fonts/UBUNTU-BOLD.eot");
@@ -60,35 +71,76 @@ body {
   font-style: normal;
 }
 
+//global-fonts
+$fontawesome: "FontAwesome";
 $summer-font: "SummerFont";
 $ubuntu-medium-font: "UBUNTU-MEDIUM";
 $ubuntu-regular-font: "UBUNTU-REGULAR";
 $ubuntu-light-font: "UBUNTU-LIGHT";
 $ubuntu-bold-font: "UBUNTU-BOLD";
 
+//global-colors
+$orange-color: #f39c12;
+$white-color: #ffffff;
+$blue-color: #3caad2;
+$orange-hover-color: #e48d12;
+$blue-hover-color: #3d9bc3;
+
+//new media container for large desktop
 @media (min-width: 1200px) {
   .container {
     width: 1200px;
   }
 }
+
+//animation fadeIN
 @media #{$bootstrap-sm} {
   .first-screen-animation {
     opacity: 0;
     bottom: -10vh;
   }
 }
+//fix dropdown on timing page and store
+.dropdown-backdrop {
+  position: static;
+}
 
-@import "navbar";
-@import "main-screen-home";
-@import "application-download";
-@import "how-it-work";
-@import "photo-block";
-@import "subscription-and-price";
-@import "reviews-block";
-@import "discount-block";
-@import "footer";
-@import "popup";
-@import "FAQ";
-@import "news";
-@import "other-news";
-@import "navbar-mobile";
+body.modal-open-noscroll
+{
+  margin-right: 0!important;
+  overflow: hidden;
+}
+.modal-open-noscroll .navbar-default, .modal-open .navbar-default
+{
+  margin-right: 0!important;
+}
+
+@import "global";
+@import "partials/navbar";
+@import "landing/main-screen-home";
+@import "partials/application-download";
+@import "landing/how-it-work";
+@import "landing/photo-block";
+@import "landing/subscription-and-price";
+@import "landing/reviews-block";
+@import "partials/discount-block";
+@import "partials/footer";
+@import "partials/popup";
+@import "partials/FAQ";
+@import "partials/news";
+@import "partials/other-news";
+@import "partials/navbar-mobile";
+@import "partials/footer-store";
+@import "store/subscription-management";
+@import "store/store";
+@import "store/address";
+@import "partials/total-cost";
+@import "partials/steps-store";
+@import "store/contacts";
+@import "store/basket";
+@import "store/history";
+@import "store/nav";
+@import "partials/error-page";
+@import "store/timing";
+@import "partials/new-password";
+@import "partials/autocomplete";

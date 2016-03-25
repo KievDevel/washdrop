@@ -1,0 +1,82 @@
+.reviews-block {
+  background: url(../img/main-photo2.png) 50% 50%;
+  .header-reviews {
+    text-align: center;
+    h2 {
+      font-family: $summer-font, "sans-serif";
+      color:  #4a4b4c;
+      font-weight: 300;
+      line-height: 100px;
+      text-align: center;
+      text-transform: uppercase;
+      @media #{$bootstrap-xs} {
+        font-size: 4.063em;
+        line-height: 60px;
+      }
+      @media #{$bootstrap-sm} {
+        font-size: 6.25em;
+        line-height: 100px;
+      }
+    }
+  }
+  .center-btn {
+    text-align: center;
+  }
+
+  .b-profile {
+    margin: 150px auto 0 auto;
+    background-color: #fff;
+    width: 100%;
+    min-height: 177px;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+    .text-reviews {
+      padding-top: 15px;
+      h2 {
+        font-family: $ubuntu-regular-font, "sans-serif";
+        color:  #3caad2;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: center;
+      }
+      p {
+        font-family: $ubuntu-light-font, "sans-serif";
+        color:  #4a4b4c;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 20px;
+        text-align: center;
+        padding: 0 25px 25px 25px;
+      }
+    }
+  }
+  .avatar__section {
+    position: absolute;
+    top: -120px;
+    left: 50%;
+    -webkit-transform: translatex(-50%);
+    -ms-transform: translatex(-50%);
+    -o-transform: translatex(-50%);
+    transform: translatex(-50%);
+  }
+  .main-avatar {
+    padding: 6px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+  }
+  .main-avatar__image {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+  }
+  .main-avatar__image-dop {
+    position: absolute;
+    top: 0;
+    right: -30px;
+  }
+}
+.margin-reviews-block {
+  margin-bottom: 60px;
+}

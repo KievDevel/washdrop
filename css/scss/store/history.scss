@@ -1,0 +1,341 @@
+.history {
+  .btn-return {
+    width: 370px;
+    height: 41px;
+    margin-top: 30px;
+    margin-bottom: 35px;
+  }
+  .history-number-block {
+    display: inline-block;
+    height: 35px;
+    width: 180px;
+    margin-left: 20px;
+    border-right: 1px solid rgba(203, 203, 203, .5);
+    float: left;
+    margin-top: 10px;
+    .number {
+      font-family: $ubuntu-light-font, "sans-serif";
+      color: #4a4b4c;
+      font-size: 1.188em;
+      font-weight: 300;
+      line-height: 34px;
+      text-align: left;
+      transform: scaleX(1.0009);
+    }
+  }
+  .history-price-block {
+    display: inline-block;
+    height: 35px;
+    width: 160px;
+    border-right: 1px solid rgba(203, 203, 203, .5);
+    float: left;
+    margin-top: 10px;
+    .price {
+      font-family: $ubuntu-medium-font, "sans-serif";
+      color: #3caad2;
+      font-size: 0.938em;
+      font-weight: 500;
+      line-height: 34px;
+      text-align: left;
+      transform: scaleX(1.0009);
+      padding-left: 35px;
+    }
+  }
+  .history-order-block {
+    display: inline-block;
+    float: left;
+    height: 35px;
+    margin-top: 10px;
+    .order {
+      font-family: $ubuntu-light-font, "sans-serif";
+      color: #4a4b4c;
+      font-size: 0.938em;
+      font-weight: 300;
+      line-height: 34px;
+      text-align: left;
+      transform: scaleX(1.0009);
+      padding-left: 35px;
+    }
+  }
+  .accordion-order {
+    margin-top: 55px;
+  }
+  .accordion-order > div{
+    cursor:pointer;
+  }
+  .accordion-item {
+    border-radius: 6px;
+    border: 1px solid rgba(203, 203, 203, .5);
+    box-sizing: border-box;
+    background-color:  #ffffff;
+    width: 570px;
+    min-height: 55px;
+    margin-top: 10px;
+  }
+  .accordion-button {
+    margin: 0 20px;
+    box-sizing: border-box;
+    background-color:  #ffffff;
+    height: 55px;
+  }
+  .accordion-marker {
+    border-radius: 50%;
+    background-color: #3caad2;
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    outline: none;
+    display: inline-block;
+    margin-top: 17px;
+    float: left;
+    &:hover {
+      background-color: #6cc2e1;
+    }
+  }
+
+  .accordion-marker i{
+    font-size: 16px;
+  }
+  .accordion-marker .fa-angle-double-down {
+    padding-left: 5.7px;
+    padding-top: 5px;
+    color:#ffffff;
+  }
+
+  .accordion-marker .fa-angle-double-up {
+    padding-left: 5.7px;
+    padding-top: 2px;
+    color:#ffffff;
+  }
+
+  .accordion-order .drop-history{
+    max-height:0;
+    overflow:hidden;
+    transition: max-height 350ms ease-in-out;
+    font-size: 0.938em;
+    font-weight: 300;
+    line-height: 20px;
+    text-align: left;
+    margin-bottom: 0;
+    background-color:  #f5f5f5;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    .drop-block {
+      border-top: 1px solid rgba(203, 203, 203, .5);
+      .drop-text-block {
+        width: 65%;
+        margin-left: 62px;
+        display: inline-block;
+        .drop-title {
+          font-family: $ubuntu-light-font, "sans-serif";
+          color: #4a4b4c;
+          font-size: 1.188em;
+          font-weight: 300;
+          line-height: 30px;
+          text-align: left;
+          margin-top: 10px;
+          margin-bottom: 0;
+
+        }
+        .drop-text {
+          font-family: $ubuntu-light-font, "sans-serif";
+          color:  #4a4b4c;
+          font-size: 0.750em;
+          font-weight: 300;
+          line-height: 14px;
+          text-align: left;
+          margin-bottom: 10px;
+        }
+      }
+      .price-block {
+        display: inline-block;
+        margin-right: 30px;
+        float: right;
+        .price-text {
+          font-family: $ubuntu-medium-font, "sans-serif";
+          color:  #3caad2;
+          font-size: 0.938em;
+          font-weight: 500;
+          line-height: 34px;
+          text-align: left;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+  .accordion-order > div.active .accordion-marker{
+    background-color: #3caad2;
+    &:hover {
+      background-color: #6cc2e1;
+    }
+  }
+  .accordion-order > div.active .accordion-marker .fa-angle-double-up{
+    color:#fff;
+  }
+  .accordion-order > div.active .drop-history{
+    max-height: 1000px;
+  }
+}
+
+.history-mobile {
+
+  .accordion-order > div.active .accordion-marker{
+    background-color: #3caad2;
+    &:hover {
+      background-color: #6cc2e1;
+    }
+  }
+  .accordion-order > div.active .accordion-marker .fa-angle-double-up{
+    color:#fff;
+  }
+  .accordion-order > div.active .drop-history{
+    max-height: 1000px;
+  }
+  .accordion-order .drop-history{
+    max-height:0;
+    overflow:hidden;
+    transition: max-height 350ms ease-in-out;
+    font-size: 0.938em;
+    font-weight: 300;
+    line-height: 20px;
+    text-align: left;
+    margin-bottom: 0;
+    background-color:  #f5f5f5;
+    .drop-block {
+      border-top: 1px solid rgba(203, 203, 203, .5);
+      .drop-text-block {
+        width: 65%;
+        margin-left: 62px;
+        display: inline-block;
+        .drop-title {
+          font-family: $ubuntu-light-font, "sans-serif";
+          color: #4a4b4c;
+          font-size: 1.188em;
+          font-weight: 300;
+          line-height: 30px;
+          text-align: left;
+          margin-top: 10px;
+          margin-bottom: 0;
+
+        }
+        .drop-text {
+          font-family: $ubuntu-light-font, "sans-serif";
+          color:  #4a4b4c;
+          font-size: 0.750em;
+          font-weight: 300;
+          line-height: 14px;
+          text-align: left;
+          margin-bottom: 10px;
+        }
+        .price-text {
+          font-family: $ubuntu-medium-font, "sans-serif";
+          color:  #3caad2;
+          font-size: 0.938em;
+          font-weight: 500;
+          line-height: 20px;
+          text-align: left;
+        }
+      }
+      .price-block {
+        display: inline-block;
+        margin-right: 30px;
+        float: right;
+        .price-text {
+          font-family: $ubuntu-medium-font, "sans-serif";
+          color:  #3caad2;
+          font-size: 0.938em;
+          font-weight: 500;
+          line-height: 34px;
+          text-align: left;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+  .accordion-order {
+    margin-top: 15px;
+    .btn-return {
+      width: 270px;
+      height: 41px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .accordion-item {
+      border-radius: 6px;
+      border: 1px solid rgba(203, 203, 203, 0.5);
+      box-sizing: border-box;
+      background-color:  #ffffff;
+      width: 90%;
+      margin-top: 10px;
+      .accordion-marker {
+        border-radius: 50%;
+        background-color: #3caad2;
+        width: 22px;
+        height: 22px;
+        padding: 0;
+        outline: none;
+        display: inline-block;
+        margin-top: 15px;
+        margin-left: 20px;
+        margin-right: 20px;
+        float: left;
+        &:hover {
+          background-color: #6cc2e1;
+        }
+        i {
+          font-size: 16px;
+        }
+        .fa-angle-double-down {
+          padding-left: 5.7px;
+          padding-top: 5px;
+          color:#ffffff;
+        }
+
+        .fa-angle-double-up {
+          padding-left: 5.7px;
+          padding-top: 2px;
+          color:#ffffff;
+        }
+      }
+      .history-number-block {
+        height: 50px;
+        .number {
+          float: left;
+          margin-top: 12px;
+          font-family: $ubuntu-light-font, "sans-serif";
+          color: #4a4b4c;
+          font-size: 1.188em;
+          font-weight: 300;
+          text-align: left;
+          transform: scaleX(1.0009);
+        }
+      }
+      .history-price-block {
+        border-top: 1px solid rgba(203, 203, 203, 0.5);
+        .price {
+          display: inline-block;
+          margin-left: 62px;
+          margin-top: 10px;
+          font-family: $ubuntu-medium-font,"sans-serif";
+          color: #3caad2;
+          font-size: 0.938em;
+          font-weight: 500;
+          text-align: left;
+          transform: scaleX(1.0009);
+        }
+        .order {
+          display: inline-block;
+          float: right;
+          margin-right: 20px;
+          margin-top: 10px;
+          font-family: $ubuntu-light-font, "sans-serif";
+          color: #4a4b4c;
+          font-size: 0.938em;
+          font-weight: 300;
+          text-align: left;
+          transform: scaleX(1.0009);
+        }
+      }
+    }
+  }
+}

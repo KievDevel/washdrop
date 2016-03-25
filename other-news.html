@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WashDrop</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/scrolling-nav.css">
-    <link rel="stylesheet" href="css/pushy.css">
 </head>
 <body>
 
@@ -16,18 +14,15 @@
     <div class="container">
         <div class="collapse navbar-collapse my-navbar" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="/FAQ.html">FAQ</a></li>
-                <li><a href="/news.html" class="page-scroll">НОВОСТИ</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="news.html">НОВОСТИ</a></li>
             </ul>
-            <ul class="nav navbar-nav logo logo-center-class">
-                <a class="navbar-brand" href="#">
-                    <img src="img/logo.png">
-                </a>
+            <ul class="nav navbar-nav logo-landing logo-center-class">
+                <li><a class="navbar-brand hidden-xs" href="#"><img src="img/logo.png" alt=""></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right my-navbar-right">
-                <li>
-                    <button type="submit" class="btn btn-default btn-navbar">СДЕЛАТЬ ЗАКАЗ</button>
-                </li>
+                <li><a>+7 (495) 223-12-23</a></li>
+                <li><button type="submit" class="btn btn-default btn-navbar">СДЕЛАТЬ ЗАКАЗ</button></li>
             </ul>
         </div>
     </div>
@@ -36,24 +31,27 @@
 <!-- Mobile NAVBAR -->
 <nav class="pushy pushy-left visible-xs-block visible-sm-block">
     <ul>
-        <li class="close-block"><button class="menu-btn close-btn"><img src="img/close-icon.png"></button></li>
-        <li><a href="/FAQ.html" class="page-scroll nav-text-mobile">FAQ</a></li>
-        <li><a href="/news.html" class="page-scroll nav-text-mobile">НАШИ ЦЕНЫ</a></li>
+        <li class="close-block"><button class="menu-btn close-btn"><img src="img/close-icon.png" alt=""></button></li>
+        <li><a href="FAQ.html" class="nav-text-mobile">FAQ</a></li>
+        <li><a href="news.html" class="nav-text-mobile">НОВОСТИ</a></li>
     </ul>
     <button type="submit" class="btn btn-default btn-navbar-mobile center-block">СДЕЛАТЬ ЗАКАЗ</button>
+    <ul class="phone-number">
+        <li><a>+7 (495) 223-12-23</a></li>
+    </ul>
 </nav>
 
 <div class="site-overlay visible-xs-block visible-sm-block"></div>
 
 <div id="container" class="visible-xs-block visible-sm-block">
-    <div class="menu-btn"><img src="img/menu-icon.png"></div>
+    <div class="menu-btn"><img src="img/menu-icon.png" alt=""></div>
 </div>
 <!-- end mobile-nav-->
 
 <div id="full-page">
 
     <div class="main-screen-news-other">
-        <img src="img/logo.png" class="visible-xs-block visible-sm-block logo-mobile">
+        <a href="#"><img src="img/logo.png" class="visible-xs-block visible-sm-block logo-mobile" alt=""></a>
     </div>
 
     <div class="container">
@@ -66,7 +64,7 @@
             <div class="col-sm-12 first-screen-animation">
                 <div class="info center-block">
                     <p class="date">10.01.16</p>
-                    <img src="img/news-other.png">
+                    <img src="img/news-other.jpg" alt="">
                     <p class="info-text">При химической чистке важно, чтобы растворители, препараты, машины и технологии были совместимы.<br /><br />
                         SYSTEMK4 представляет собой экологичную и абсолютно безопасную технологию чистки.
                         Основной компонент SYSTEMK4 — безгалогеновый растворитель, который не представляет
@@ -88,31 +86,34 @@
         <div class="row">
             <div class="other-news fade-bottom">
                 <div class="col-sm-12 slide-bottom" data-plugin-options='{"reverse":false}'>
-                    <h2>Другие новости</h2>
-                    <img src="img/dot-blue.png" class="dot">
+                    <h2 class="slide-bottom" data-plugin-options='{"reverse":false}'>Другие новости</h2>
+                    <img class="slide-bottom dot" data-plugin-options='{"reverse":false}' src="img/dot-blue.png" alt="">
                 </div>
-                <div class="col-sm-4 slide-bottom" data-plugin-options='{"reverse":false}'>
-                    <div class="news-block">
-                        <img src="img/Basker.png">
-                        <h3>Экологичная и абсолютно безопасная технология чистки</h3>
-                        <p>10.01.16</p>
-                        <hr class="hr-news">
+                <div class="col-sm-4">
+                    <div class="news-block fade-bottom">
+                        <a href="#" class="slide-bottom" data-plugin-options='{"reverse":false}'><img src="img/Basker.png" alt=""></a>
+                        <h3 class="slide-bottom" data-plugin-options='{"reverse":false}'>Экологичная и абсолютно безопасная технология чистки</h3>
+                        <p class="slide-bottom" data-plugin-options='{"reverse":false}'>10.01.16</p>
+                        <a href="#" class="btn btn-news slide-bottom" data-plugin-options='{"reverse":false}'>ЧИТАТЬ</a>
+                        <hr class="hr-news slide-bottom" data-plugin-options='{"reverse":false}'>
                     </div>
                 </div>
-                <div class="col-sm-4 slide-bottom" data-plugin-options='{"reverse":false}'>
-                    <div class="news-block">
-                        <img src="img/Basker.png">
-                        <h3>Экологичная и абсолютно безопасная технология чистки</h3>
-                        <p>10.01.16</p>
-                        <hr class="hr-news">
+                <div class="col-sm-4">
+                    <div class="news-block fade-bottom">
+                        <a href="#" class="slide-bottom" data-plugin-options='{"reverse":false}'><img src="img/Basker.png" alt=""></a>
+                        <h3 class="slide-bottom" data-plugin-options='{"reverse":false}'>Экологичная и абсолютно безопасная технология чистки</h3>
+                        <p class="slide-bottom" data-plugin-options='{"reverse":false}'>10.01.16</p>
+                        <a href="#" class="btn btn-news slide-bottom" data-plugin-options='{"reverse":false}'>ЧИТАТЬ</a>
+                        <hr class="hr-news slide-bottom" data-plugin-options='{"reverse":false}'>
                     </div>
                 </div>
-                <div class="col-sm-4 slide-bottom" data-plugin-options='{"reverse":false}'>
-                    <div class="news-block">
-                        <img src="img/Basker.png">
-                        <h3>Экологичная и абсолютно безопасная технология чистки</h3>
-                        <p>10.01.16</p>
-                        <hr class="hr-news">
+                <div class="col-sm-4">
+                    <div class="news-block fade-bottom">
+                        <a href="#" class="slide-bottom" data-plugin-options='{"reverse":false}'><img src="img/Basker.png" alt=""></a>
+                        <h3 class="slide-bottom" data-plugin-options='{"reverse":false}'>Экологичная и абсолютно безопасная технология чистки</h3>
+                        <p class="slide-bottom" data-plugin-options='{"reverse":false}'>10.01.16</p>
+                        <a href="#" class="btn btn-news slide-bottom" data-plugin-options='{"reverse":false}'>ЧИТАТЬ</a>
+                        <hr class="hr-news slide-bottom" data-plugin-options='{"reverse":false}'>
                     </div>
                 </div>
             </div>
@@ -129,11 +130,11 @@
                     <div class="phone-app-bg slide-left" data-plugin-options='{"reverse":false}'></div>
                     <div class="block-for-app-btn slide-top" data-plugin-options='{"reverse":false}'>
                         <button class="btn-for-android">
-                            <div class="google-logo"></div>
+                            <span class="google-logo"></span>
                         </button>
                         <button class="btn-for-ios">
-                            <div class="apple-logo"></div>
-                            <div class="apple-text-btn">App store</div>
+                            <span class="apple-logo"></span>
+                            <span class="apple-text-btn">App store</span>
                         </button>
                     </div>
                 </div>
@@ -145,21 +146,21 @@
         <div class="container fade-bottom">
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="discount slide-bottom" data-plugin-options='{"reverse":false}'>
-                        <h2>Получите скидку 500 рублей на первый заказ</h2>
-                        <p>Для этого используйте промокод "Промокод" при оформлении заказа</p>
-                        <button class="btn btn-discount" >СДЕЛАТЬ ПЕРВЫЙ ЗАКАЗ</button>
+                    <div class="discount" >
+                        <h2 class="slide-bottom" data-plugin-options='{"reverse":false}'>Получите скидку 500 рублей</h2>
+                        <p class="slide-bottom" data-plugin-options='{"reverse":false}'>Для этого используйте промокод "Промокод" при оформлении заказа</p>
+                        <button class="btn btn-discount slide-bottom" data-plugin-options='{"reverse":false}'>СДЕЛАТЬ ПЕРВЫЙ ЗАКАЗ</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer>
+    <footer class="footer-landing">
         <div class="container fade-bottom">
             <div class="row">
                 <div class="col-xs-12 col-sm-2 mobile-logo slide-left" data-plugin-options='{"reverse":false}'>
-                    <img src="img/logo.png" class="logo-footer">
+                    <a href="#"><img src="img/logo.png" class="logo-footer" alt=""></a>
                     <hr class="mobile-footer-hr">
                 </div>
                 <div class="col-xs-12 col-sm-2 col-sm-offset-1 col-md-offset-0 col-lg-offset-1 slide-bottom" data-plugin-options='{"reverse":false}'>
@@ -168,16 +169,16 @@
                 </div>
                 <div class="col-xs-12 col-sm-3 slide-top" data-plugin-options='{"reverse":false}'>
                     <p>Принимаем к оплате карты:</p>
-                    <img src="img/visamastercard.png">
+                    <img src="img/visamastercard.png" alt="">
                 </div>
                 <div class="col-sm-4 col-md-5 col-lg-4 hidden-xs slide-bottom" data-plugin-options='{"reverse":false}'>
                     <div class="btn-right">
                         <button class="btn-apple">
-                            <div class="apple-logo"></div>
-                            <div class="apple-text-btn">App store</div>
+                            <span class="apple-logo"></span>
+                            <span class="apple-text-btn">App store</span>
                         </button>
                         <button class="btn-android">
-                            <div class="google-logo"></div>
+                            <span class="google-logo"></span>
                         </button>
                     </div>
                 </div>
@@ -189,6 +190,7 @@
                         <a href="#">Как это работает?</a>
                         <a href="#">Наши цены</a>
                         <a href="#">Контакты</a>
+                        <a class="hidden-md" >+7 (495) 223-12-23</a>
                     </div>
                 </div>
                 <div class="col-xs-12 visible-xs-block">
@@ -207,13 +209,12 @@
 
 </div>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="js/scrolling-nav.js"></script>
+<script src="js/jquery-2.0.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.easing.min.js"></script>
 <script src="js/jquery.fadethis.js"></script>
 <script src="js/mobile-detect.min.js"></script>
-<script src="js/jFade.js"></script>
+<script src="js/Fade.js"></script>
 <script src="js/pushy.min.js"></script>
 
 </body>
